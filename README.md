@@ -1,23 +1,23 @@
 # home-repo
 
-Монорепозиторий-каталог для хранения других монопроектов. Каждый подпроект —
-независимый git-репозиторий, который клонируется в свою папку и трекается
-в манифесте `projects.csv` (формат `path;url`).
+Monorepo catalog for hosting other mono-projects. Each subproject is an
+independent git repository cloned into its own folder and tracked in the
+`projects.csv` manifest (`path;url` format).
 
-## Структура
+## Structure
 
-- `collection/` — подпроекты-коллекции (клонированные репо, не коммитятся)
-- `projects.csv` — манифест подпроектов
+- `collection/` — collection subprojects (cloned repos, not committed)
+- `projects.csv` — manifest of subprojects
 - `.githooks/` — `project-sync.sh` + `post-merge` / `post-checkout`:
-  недостающие репо клонируются автоматически
+  missing repos are cloned automatically
 
-## Подключение хуков
+## Hook setup
 
 ```sh
 git config core.hooksPath .githooks
 ```
 
-## Добавление подпроекта
+## Adding a subproject
 
-Добавить строку `path;url` в `projects.csv` и выполнить
+Add a `path;url` line to `projects.csv` and run
 `.githooks/project-sync.sh`.
