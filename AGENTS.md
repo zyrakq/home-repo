@@ -21,23 +21,14 @@
 - NEVER create projects outside home-repo and the projects nested in it.
   Ask before placing a new project.
 
-## Graver work
+## Agent work
 
-When working with the graver plugin (stacks, deploy configs), work in
-`collection/docker-stack-collection` and treat it as the project root: also
-read its `AGENTS.md` and all rules from there (secrets solution, infra roles,
-stack conventions).
-
-## Artificer work
-
-When working with the artificer plugin on collection projects, work in
-`collection/project-stack-collection` and treat it as the project root: also
-read its `AGENTS.md` and all rules from there (secrets solution). Specs go into
-the `openspec/` of the specific sub-project, not the collection.
+Before working as an agent, load its skill: graver → `graver-work`,
+artificer → `artificer-work`.
 
 ## On-demand rules
 
 - Before plugin or stack work, load the matching skill from `.opencode/skills`
-  (`plugin-manifests-rule` for plugins.csv, `stack-work` for graver and
+  (`plugin-manifests-rule` for plugins.csv, `graver-work` for graver and
   collection stacks, `project-placement` before creating or moving any
   project).
