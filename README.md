@@ -7,6 +7,7 @@ independent git repository cloned into its own folder and tracked in the
 ## Structure
 
 - `collection/` — collection subprojects (cloned repos, not committed)
+- `tools/` — shared tooling subprojects (e.g. `agent-base`, not committed)
 - `projects.csv` — manifest of subprojects
 - `plugins.csv` — manifest of OpenCode plugins (`path;url`)
 - `.githooks/` — `project-sync.sh`, `plugin-sync.sh` + `post-merge` /

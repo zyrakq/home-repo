@@ -1,6 +1,8 @@
 # subprojects are independent repos (see projects.csv)
 collection/*/
 !collection/.gitkeep
+tools/*/
+!tools/.gitkeep
 
 thoughts/ledgers/CONTINUITY_*.md
 .opencode/scratch/
