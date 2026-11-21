@@ -21,6 +21,13 @@
 - NEVER create projects outside home-repo and the projects nested in it.
   Ask before placing a new project.
 
+## Graver work
+
+When working with the graver plugin (stacks, deploy configs), work in
+`collection/docker-stack-collection` and treat it as the project root: also
+read its `AGENTS.md` and all rules from there (secrets solution, infra roles,
+stack conventions).
+
 ## On-demand rules
 
 - Before plugin or stack work, load the matching skill from `.opencode/skills`
