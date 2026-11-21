@@ -24,7 +24,7 @@
 ## Agent work
 
 Before working as an agent, load its skill: graver → `graver-work`,
-artificer → `artificer-work`.
+artificer → `artificer-work`, scion → `scion-work`.
 
 ## On-demand rules
 
