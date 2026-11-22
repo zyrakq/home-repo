@@ -16,7 +16,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Batch 7 (docs, parallel): T26 T27 T28
 - Batch 8 (REQUIRES EXPLICIT USER CONFIRMATION): T29 T30 T31
 
-- [ ] T01
+- [x] T01
 - File: `tools/toolshelf/README.md`
 - Test: `git -C tools/toolshelf rev-parse`
 - Depends: -
@@ -25,7 +25,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `git -C /home/archuser/projects/home-repo/tools/toolshelf rev-parse --git-dir`
 - Commit: `docs: add toolshelf README`
 
-- [ ] T02
+- [x] T02
 - File: `toolshelf/scripts/check-toolshelf.mjs`
 - Test: `toolshelf/scripts/check-toolshelf.test.mjs`
 - Depends: T01
@@ -34,7 +34,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `bun test scripts/`
 - Commit: `feat: add layout checker`
 
-- [ ] T03
+- [x] T03
 - File: `toolshelf/fnox-secrets/ (skills/fnox-secrets (+scripts), rules/secrets.md from the fnox-secrets plugin)`
 - Test: `node scripts/check-toolshelf.mjs fnox-secrets`
 - Depends: T02
@@ -43,7 +43,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `node scripts/check-toolshelf.mjs`
 - Commit: `feat: add fnox-secrets tool`
 
-- [ ] T04
+- [x] T04
 - File: `toolshelf/kanidm/ (skills/kanidm-oidc (+references), agents/kanidm-admin.md, rules/secrets.md)`
 - Test: `node scripts/check-toolshelf.mjs kanidm`
 - Depends: T02
@@ -52,7 +52,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `node scripts/check-toolshelf.mjs`
 - Commit: `feat: add kanidm tool`
 
-- [ ] T05
+- [x] T05
 - File: `toolshelf/rustfs/ (skills/rustfs-s3 (+references), agents/rustfs-admin.md, rules/secrets.md)`
 - Test: `node scripts/check-toolshelf.mjs rustfs`
 - Depends: T02
@@ -61,7 +61,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `node scripts/check-toolshelf.mjs`
 - Commit: `feat: add rustfs tool`
 
-- [ ] T06
+- [x] T06
 - File: `toolshelf/ssh-agent/ (skills/ssh-agent, tool.ts exporting ssh_load + shell hook + rule (from plugins/ssh-agent/src/index.ts))`
 - Test: `node scripts/check-toolshelf.mjs ssh-agent`
 - Depends: T02
@@ -70,7 +70,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `node scripts/check-toolshelf.mjs`
 - Commit: `feat: add ssh-agent tool`
 
-- [ ] T07
+- [x] T07
 - File: `toolshelf/step-ca/ (skills/step-ca-trust, rules/secrets.md)`
 - Test: `node scripts/check-toolshelf.mjs step-ca`
 - Depends: T02
@@ -79,7 +79,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `node scripts/check-toolshelf.mjs`
 - Commit: `feat: add step-ca tool`
 
-- [ ] T08
+- [x] T08
 - File: `src/settings.ts`
 - Test: `test/settings.test.ts`
 - Depends: T03-T07 (batch 3)
@@ -88,7 +88,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `bun test`
 - Commit: `feat(scion): src/settings.ts`
 
-- [ ] T09
+- [x] T09
 - File: `scion.schema.json`
 - Test: `test/schema.test.ts`
 - Depends: T03-T07 (batch 3)
@@ -97,7 +97,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `bun test`
 - Commit: `feat(scion): scion.schema.json`
 
-- [ ] T10
+- [x] T10
 - File: `tools.list.json`
 - Test: `test/tools-list.test.ts`
 - Depends: T03-T07 (batch 3)
@@ -106,7 +106,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `bun test`
 - Commit: `feat(scion): tools.list.json`
 
-- [ ] T11
+- [x] T11
 - File: `scripts/build-tools.ts`
 - Test: `test/build-tools.test.ts`
 - Depends: T03-T07 (batch 3)
@@ -115,7 +115,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `bun test`
 - Commit: `feat(scion): scripts/build-tools.ts`
 
-- [ ] T12
+- [x] T12
 - File: `src/tools.ts`
 - Test: `test/tools.test.ts`
 - Depends: T03-T07 (batch 3), T8
@@ -124,7 +124,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `bun test`
 - Commit: `feat(scion): src/tools.ts`
 
-- [ ] T13
+- [x] T13
 - File: `src/index.ts`
 - Test: `test/index.test.ts`
 - Depends: T8, T12
@@ -133,7 +133,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `bun test`
 - Commit: `feat(scion): src/index.ts`
 
-- [ ] T14
+- [x] T14
 - File: `artificer/src/settings.ts`
 - Test: `artificer/test/settings.test.ts`
 - Depends: T13
@@ -142,7 +142,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `bun test`
 - Commit: `feat(artificer): src/settings.ts`
 
-- [ ] T15
+- [x] T15
 - File: `artificer/artificer.schema.json`
 - Test: `artificer/test/schema.test.ts`
 - Depends: T13
@@ -151,7 +151,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `bun test`
 - Commit: `feat(artificer): artificer.schema.json`
 
-- [ ] T16
+- [x] T16
 - File: `artificer/tools.list.json`
 - Test: `artificer/test/tools-list.test.ts`
 - Depends: T13
@@ -160,7 +160,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `bun test`
 - Commit: `feat(artificer): tools.list.json`
 
-- [ ] T17
+- [x] T17
 - File: `artificer/scripts/build-tools.ts`
 - Test: `artificer/test/build-tools.test.ts`
 - Depends: T13
@@ -169,7 +169,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `bun test`
 - Commit: `feat(artificer): scripts/build-tools.ts`
 
-- [ ] T18
+- [x] T18
 - File: `artificer/src/tools.ts`
 - Test: `artificer/test/tools.test.ts`
 - Depends: T13, T14
@@ -178,7 +178,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `bun test`
 - Commit: `feat(artificer): src/tools.ts`
 
-- [ ] T19
+- [x] T19
 - File: `artificer/src/index.ts`
 - Test: `artificer/test/index.test.ts`
 - Depends: T14, T18
@@ -187,7 +187,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `bun test`
 - Commit: `feat(artificer): src/index.ts`
 
-- [ ] T20
+- [x] T20
 - File: `graver/src/settings.ts`
 - Test: `graver/test/settings.test.ts`
 - Depends: T13
@@ -196,7 +196,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `bun test`
 - Commit: `feat(graver): src/settings.ts`
 
-- [ ] T21
+- [x] T21
 - File: `graver/graver.schema.json`
 - Test: `graver/test/schema.test.ts`
 - Depends: T13
@@ -205,7 +205,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `bun test`
 - Commit: `feat(graver): graver.schema.json`
 
-- [ ] T22
+- [x] T22
 - File: `graver/tools.list.json`
 - Test: `graver/test/tools-list.test.ts`
 - Depends: T13
@@ -214,7 +214,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `bun test`
 - Commit: `feat(graver): tools.list.json`
 
-- [ ] T23
+- [x] T23
 - File: `graver/scripts/build-tools.ts`
 - Test: `graver/test/build-tools.test.ts`
 - Depends: T13
@@ -223,7 +223,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `bun test`
 - Commit: `feat(graver): scripts/build-tools.ts`
 
-- [ ] T24
+- [x] T24
 - File: `graver/src/tools.ts`
 - Test: `graver/test/tools.test.ts`
 - Depends: T13, T20
@@ -232,7 +232,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `bun test`
 - Commit: `feat(graver): src/tools.ts`
 
-- [ ] T25
+- [x] T25
 - File: `graver/src/index.ts`
 - Test: `graver/test/index.test.ts`
 - Depends: T20, T24
@@ -241,7 +241,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `bun test`
 - Commit: `feat(graver): src/index.ts`
 
-- [ ] T26
+- [x] T26
 - File: `scion/README.md`
 - Test: `grep -q build:tools scion/README.md`
 - Depends: T13
@@ -250,7 +250,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `grep build:tools README.md`
 - Commit: `docs(scion): settings and tools`
 
-- [ ] T27
+- [x] T27
 - File: `artificer/README.md`
 - Test: `grep -q build:tools artificer/README.md`
 - Depends: T25
@@ -259,7 +259,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `grep build:tools README.md`
 - Commit: `docs(artificer): settings and tools`
 
-- [ ] T28
+- [x] T28
 - File: `graver/README.md`
 - Test: `grep -q build:tools graver/README.md`
 - Depends: T25
@@ -268,7 +268,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `grep build:tools README.md`
 - Commit: `docs(graver): settings and tools`
 
-- [ ] T29
+- [x] T29
 - File: `collection/project-stack-collection/AGENTS.md`
 - Test: `grep -L Secrets (file absent)`
 - Depends: T28
@@ -277,7 +277,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `test ! -e collection/project-stack-collection/AGENTS.md`
 - Commit: `chore: drop secrets section`
 
-- [ ] T30
+- [x] T30
 - File: `collection/docker-stack-collection/AGENTS.md`
 - Test: `grep -c fnox AGENTS.md == 0`
 - Depends: T28
@@ -286,7 +286,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Verify: `! grep -n fnox collection/docker-stack-collection/AGENTS.md`
 - Commit: `chore: generalize secrets and host safety text`
 
-- [ ] T31
+- [x] T31
 - File: `.opencode/skills/scion-work/SKILL.md`
 - Test: `! grep -n fnox .opencode/skills/scion-work/SKILL.md`
 - Depends: T28
