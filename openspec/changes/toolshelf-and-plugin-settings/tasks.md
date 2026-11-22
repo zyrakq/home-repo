@@ -4,7 +4,7 @@ Goal: create toolshelf and per-plugin settings so scion, artificer, graver load 
 Target: `.` = home-repo root (scion: `tools/scion`, artificer: `tools/artificer`, graver: `tools/graver` = `~/.config/opencode/plugins/<name>`; toolshelf: `tools/toolshelf`)
 Change: toolshelf-and-plugin-settings
 
-Notes: scion agents/skills are generated from `templates/` (never hand-edit). Old plugins are NOT deleted. Test runner: confirm in T08 (default `node --test` via tsx).
+Notes: scion agents/skills are generated from `templates/` (never hand-edit). Old plugins are NOT deleted. Test runner: `bun test` (bun is used by the plugins, bun.lock).
 
 ## Dependency Graph
 - Batch 1: T01
@@ -31,7 +31,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Depends: T01
 - Covers: toolshelf/layout
 - Do: Validator: each tool dir has only skills/agents/rules/tool.ts; SKILL.md frontmatter has name+description; exits non-zero otherwise.
-- Verify: `node --test scripts/`
+- Verify: `bun test scripts/`
 - Commit: `feat: add layout checker`
 
 - [ ] T03

@@ -36,5 +36,5 @@ Unit tests per module with temp dirs (settings merge/order, unknown tool warning
 ## Open Questions
 - V2 signatures above come from the request and were NOT re-verified with scion-researcher; the first implementation task must confirm them against `@opencode/plugin` 2.0.21 types.
 - Toolshelf git remote unknown; no plugins.csv entry.
-- No test runner seen in the plugins; tasks assume `node --test` with tsx or bun test, to confirm.
+- Test runner: `bun test` (bun already used by the plugins).
 - While old and new plugins coexist, duplicate rules/skill ids may appear (accepted).
