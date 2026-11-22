@@ -85,7 +85,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Depends: T03-T07 (batch 3)
 - Covers: plugin-settings/lookup,merge,warnings
 - Do: Load `scion.jsonc` (or .json) from the 3 locations in order, strip JSONC comments, deep-merge, return role->tool map; warn on invalid entries, never throw.
-- Verify: `npm test`
+- Verify: `bun test`
 - Commit: `feat(scion): src/settings.ts`
 
 - [ ] T09
@@ -94,7 +94,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Depends: T03-T07 (batch 3)
 - Covers: plugin-settings/schema
 - Do: JSON schema: `tools` object, string values, free role keys, documented roles secrets, ssh. Test validates an example settings file.
-- Verify: `npm test`
+- Verify: `bun test`
 - Commit: `feat(scion): scion.schema.json`
 
 - [ ] T10
@@ -103,7 +103,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Depends: T03-T07 (batch 3)
 - Covers: toolshelf/delivery
 - Do: List of tool names to copy: fnox-secrets, ssh-agent.
-- Verify: `npm test`
+- Verify: `bun test`
 - Commit: `feat(scion): tools.list.json`
 
 - [ ] T11
@@ -112,7 +112,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Depends: T03-T07 (batch 3)
 - Covers: toolshelf/delivery
 - Do: Copy listed tool dirs from toolshelf (path arg/env) into `tools/<name>/`, replacing old copy; add `build:tools` to package.json scripts (same task, one-line edit).
-- Verify: `npm test`
+- Verify: `bun test`
 - Commit: `feat(scion): scripts/build-tools.ts`
 
 - [ ] T12
@@ -121,7 +121,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Depends: T03-T07 (batch 3), T8
 - Covers: tool-loading/*
 - Do: Register only configured tools: skills via ctx.skill.transform, agents via ctx.agent.transform, rules via ctx.session.hook("context"), tool.ts via ctx.tool.transform. Missing dir: warn, skip. FIRST confirm V2 signatures against @opencode/plugin types.
-- Verify: `npm test`
+- Verify: `bun test`
 - Commit: `feat(scion): src/tools.ts`
 
 - [ ] T13
@@ -130,7 +130,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Depends: T8, T12
 - Covers: tool-loading/startup
 - Do: Call settings + tools loader inside setup; test with a fake ctx that only configured tools register.
-- Verify: `npm test`
+- Verify: `bun test`
 - Commit: `feat(scion): src/index.ts`
 
 - [ ] T14
@@ -139,7 +139,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Depends: T13
 - Covers: plugin-settings/lookup,merge,warnings
 - Do: Load `artificer.jsonc` (or .json) from the 3 locations in order, strip JSONC comments, deep-merge, return role->tool map; warn on invalid entries, never throw.
-- Verify: `npm test`
+- Verify: `bun test`
 - Commit: `feat(artificer): src/settings.ts`
 
 - [ ] T15
@@ -148,7 +148,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Depends: T13
 - Covers: plugin-settings/schema
 - Do: JSON schema: `tools` object, string values, free role keys, documented roles secrets, ssh. Test validates an example settings file.
-- Verify: `npm test`
+- Verify: `bun test`
 - Commit: `feat(artificer): artificer.schema.json`
 
 - [ ] T16
@@ -157,7 +157,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Depends: T13
 - Covers: toolshelf/delivery
 - Do: List of tool names to copy: fnox-secrets, ssh-agent.
-- Verify: `npm test`
+- Verify: `bun test`
 - Commit: `feat(artificer): tools.list.json`
 
 - [ ] T17
@@ -166,7 +166,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Depends: T13
 - Covers: toolshelf/delivery
 - Do: Copy listed tool dirs from toolshelf (path arg/env) into `tools/<name>/`, replacing old copy; add `build:tools` to package.json scripts (same task, one-line edit).
-- Verify: `npm test`
+- Verify: `bun test`
 - Commit: `feat(artificer): scripts/build-tools.ts`
 
 - [ ] T18
@@ -175,7 +175,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Depends: T13, T14
 - Covers: tool-loading/*
 - Do: Register only configured tools: skills via ctx.skill.transform, agents via ctx.agent.transform, rules via ctx.session.hook("context"), tool.ts via ctx.tool.transform. Missing dir: warn, skip.
-- Verify: `npm test`
+- Verify: `bun test`
 - Commit: `feat(artificer): src/tools.ts`
 
 - [ ] T19
@@ -184,7 +184,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Depends: T14, T18
 - Covers: tool-loading/startup
 - Do: Call settings + tools loader inside setup; test with a fake ctx that only configured tools register.
-- Verify: `npm test`
+- Verify: `bun test`
 - Commit: `feat(artificer): src/index.ts`
 
 - [ ] T20
@@ -193,7 +193,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Depends: T13
 - Covers: plugin-settings/lookup,merge,warnings
 - Do: Load `graver.jsonc` (or .json) from the 3 locations in order, strip JSONC comments, deep-merge, return role->tool map; warn on invalid entries, never throw.
-- Verify: `npm test`
+- Verify: `bun test`
 - Commit: `feat(graver): src/settings.ts`
 
 - [ ] T21
@@ -202,7 +202,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Depends: T13
 - Covers: plugin-settings/schema
 - Do: JSON schema: `tools` object, string values, free role keys, documented roles secrets, ssh, certificate-manager, sso, s3. Test validates an example settings file.
-- Verify: `npm test`
+- Verify: `bun test`
 - Commit: `feat(graver): graver.schema.json`
 
 - [ ] T22
@@ -211,7 +211,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Depends: T13
 - Covers: toolshelf/delivery
 - Do: List of tool names to copy: fnox-secrets, ssh-agent, step-ca, kanidm, rustfs.
-- Verify: `npm test`
+- Verify: `bun test`
 - Commit: `feat(graver): tools.list.json`
 
 - [ ] T23
@@ -220,7 +220,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Depends: T13
 - Covers: toolshelf/delivery
 - Do: Copy listed tool dirs from toolshelf (path arg/env) into `tools/<name>/`, replacing old copy; add `build:tools` to package.json scripts (same task, one-line edit).
-- Verify: `npm test`
+- Verify: `bun test`
 - Commit: `feat(graver): scripts/build-tools.ts`
 
 - [ ] T24
@@ -229,7 +229,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Depends: T13, T20
 - Covers: tool-loading/*
 - Do: Register only configured tools: skills via ctx.skill.transform, agents via ctx.agent.transform, rules via ctx.session.hook("context"), tool.ts via ctx.tool.transform. Missing dir: warn, skip.
-- Verify: `npm test`
+- Verify: `bun test`
 - Commit: `feat(graver): src/tools.ts`
 
 - [ ] T25
@@ -238,7 +238,7 @@ Notes: scion agents/skills are generated from `templates/` (never hand-edit). Ol
 - Depends: T20, T24
 - Covers: tool-loading/startup
 - Do: Call settings + tools loader inside setup; test with a fake ctx that only configured tools register.
-- Verify: `npm test`
+- Verify: `bun test`
 - Commit: `feat(graver): src/index.ts`
 
 - [ ] T26
