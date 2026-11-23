@@ -28,7 +28,7 @@ artificer → `artificer-work`, scion → `scion-work`.
 
 ## On-demand rules
 
-- Before plugin or stack work, load the matching skill from `.opencode/skills`
-  (`plugin-manifests-rule` for plugins.csv, `graver-work` for graver and
-  collection stacks, `project-placement` before creating or moving any
-  project).
+- Before plugin or stack work, load the matching skill (`plugin-manifest`
+  from the scion plugin for plugins.csv, `graver-work` from `.opencode/skills`
+  for graver and collection stacks, `project-placement` before creating or
+  moving any project).
