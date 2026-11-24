@@ -3,3 +3,5 @@ path;url
 .opencode/global-plugins/graver;git@github.com:zyrakq/graver.git
 .opencode/global-plugins/scion;git@github.com:zyrakq/scion.git
 .opencode/global-plugins/artificer;git@github.com:zyrakq/artificer.git
+.opencode/global-plugins/clever-loafer;-
+.opencode/global-plugins/dumb-loafer;-
