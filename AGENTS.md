@@ -32,3 +32,8 @@ artificer → `artificer-work`, scion → `scion-work`.
   from the scion plugin for plugins.csv, `graver-work` from `.opencode/skills`
   for graver and collection stacks, `project-placement` before creating or
   moving any project).
+
+## Agent stack collection
+
+Before work on foreign-plugin extraction or own agent template packages
+(`collection/agent-stack-collection`), read its `AGENTS.md` first.

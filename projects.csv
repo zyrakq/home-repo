@@ -3,3 +3,4 @@ collection/docker-stack-collection;https://github.com/zyrakq/docker-stack-collec
 collection/project-stack-collection;https://github.com/zyrakq/project-stack-collection.git
 tools/agent-base;https://github.com/zyrakq/agent-base.git
 tools/recon-base;git@github.com:zyrakq/recon-base.git
+collection/agent-stack-collection;git@github.com:zyrakq/agent-stack-collection.git
