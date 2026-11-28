@@ -1,6 +1,2 @@
 path;url
 .opencode/global-plugins/micode;https://github.com/zyrakq/micode.git
-.opencode/global-plugins/loafer;git@github.com:zyrakq/loafer.git
-collection/agent-stack-collection/plugins/graver;git@github.com:zyrakq/graver.git
-collection/agent-stack-collection/plugins/scion;git@github.com:zyrakq/scion.git
-collection/agent-stack-collection/plugins/artificer;git@github.com:zyrakq/artificer.git
